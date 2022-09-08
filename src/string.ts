@@ -7,8 +7,8 @@ export const capitalize = (str: string): string => {
 /**
  * Joins all string arguments in a camel case fashion
  *
- * camel('hello', 'world')   -> 'helloWorld'
- * camel('va', 'va', 'voom') -> 'vaVaVoom'
+ * camel('hello world') -> 'helloWorld'
+ * camel('va-va-voom')  -> 'vaVaVoom'
  */
 export const camel = (str: string): string => {
   const parts = str?.split(/[\.\-\s_]/).map(x => x.toLowerCase()) ?? []
@@ -22,8 +22,8 @@ export const camel = (str: string): string => {
 /**
  * Joins all string arguments in a snake case fashion
  *
- * camel('hello', 'world')   -> 'hello_world'
- * camel('va', 'va', 'voom') -> 'va_va_voom'
+ * camel('hello world') -> 'hello_world'
+ * camel('va-va-voom')  -> 'va_va_voom'
  */
 export const snake = (str: string): string => {
   const parts = str?.split(/[\.\-\s_]/).map(x => x.toLowerCase()) ?? []
@@ -37,8 +37,8 @@ export const snake = (str: string): string => {
 /**
  * Joins all string arguments in a dash case fashion
  *
- * camel('hello', 'world')   -> 'hello-world'
- * camel('va', 'va', 'voom') -> 'va-va-voom'
+ * camel('hello world') -> 'hello-world'
+ * camel('va_va_voom')  -> 'va-va-voom'
  */
 export const dash = (str: string): string => {
   const parts = str?.split(/[\.\-\s_]/).map(x => x.toLowerCase()) ?? []
@@ -53,7 +53,7 @@ export const dash = (str: string): string => {
  * template is used to replace data by name in template strings.
  * The default expression looks for {{name}} to identify names.
  *
- * Ex. tempalte('Hello, {{name}}', { name: 'ray' })
+ * Ex. template('Hello, {{name}}', { name: 'ray' })
  * Ex. template('Hello, <name>', { name: 'ray' }, /<(.+?)>/g)
  */
 export const template = (
