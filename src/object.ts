@@ -189,7 +189,7 @@ export const get = <T, K>(
 }
 
 /**
- * Zip two objects together recursivly into a new
+ * Zip two objects together recursively into a new
  * object applying values from right to left.
  * Recursion only applies to child object properties.
  */

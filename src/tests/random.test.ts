@@ -45,7 +45,7 @@ describe('random module', () => {
       const totalAfter = _.sum(result)
       assert.equal(totalBefore, totalAfter)
     })
-    test('returns copy of list without mutatuing input', () => {
+    test('returns copy of list without mutating input', () => {
       const list = [1, 2, 3, 4, 5]
       const result = _.shuffle(list)
       assert.notEqual(list, result)

@@ -82,7 +82,7 @@ describe('curry module', () => {
       const result = _.partob(add, { a: 10 })({ b: 10 })
       assert.equal(result, expected)
     })
-    test('partob overrides inital with later', () => {
+    test('partob overrides initial with later', () => {
       const add = ({ a, b }: { a: number, b: number }) => a + b
       const expected = 15
       const result = _.partob(add, { a: 10 })({ a: 5, b: 10 } as any)
@@ -162,7 +162,7 @@ describe('curry module', () => {
       assert.equal(calls, 1)
     })
   })
-  
+
   describe('throttle function', () => {
     test('', async () => {
       let calls = 0

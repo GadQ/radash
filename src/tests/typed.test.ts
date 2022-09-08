@@ -173,7 +173,7 @@ describe('typed module', () => {
       assert.isTrue(result)
     })
   })
-  
+
   describe('isNumber function', () => {
     test('returns false for null', () => {
       const result = _.isNumber(null)
@@ -221,7 +221,7 @@ describe('typed module', () => {
       assert.isFalse(result)
     })
   })
-  
+
   describe('isInt function', () => {
     class Data {}
     test('returns false for non-number values', () => {
@@ -244,7 +244,7 @@ describe('typed module', () => {
       assert.isFalse(result)
     })
   })
-  
+
   describe('isFloat function', () => {
     class Data {}
     test('returns false for non-number values', () => {
@@ -267,7 +267,7 @@ describe('typed module', () => {
       assert.isTrue(result)
     })
   })
-  
+
   describe('isEmpty function', () => {
     class Data {}
     class Person {
@@ -324,7 +324,7 @@ describe('typed module', () => {
       assert.isFalse(_.isDate(Symbol('hello')))
     })
   })
- 
+
   describe('isSymbol function', () => {
     test('returns false for null', () => {
       const input = null
@@ -454,7 +454,7 @@ describe('typed module', () => {
       boolean: true,
       unf: void 0,
       nul: null,
-      obj: { name: 'object', id: 1, chilren: [0, 1, 2] },
+      obj: { name: 'object', id: 1, children: [0, 1, 2] },
       arr: [0, 1, 2],
       func() {
         console.log('function');

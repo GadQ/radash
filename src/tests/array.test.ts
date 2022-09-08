@@ -55,9 +55,9 @@ describe('array module', () => {
     })
     test('adds list of objects correctly using getter fn', () => {
       const list = [
-        { value: 5 }, 
-        { value: 5 }, 
-        { value: 10 }, 
+        { value: 5 },
+        { value: 5 },
+        { value: 10 },
         { value: 2 }
       ]
       const result = _.sum(list, x => x.value)
@@ -114,8 +114,8 @@ describe('array module', () => {
   describe('sort function', () => {
     test('uses getter', () => {
       const list = [
-        { index: 2 }, 
-        { index: 0 }, 
+        { index: 2 },
+        { index: 0 },
         { index: 1 }
       ]
       const result = _.sort(list, i => i.index)
@@ -126,8 +126,8 @@ describe('array module', () => {
     })
     test('uses descending order', () => {
       const list = [
-        { index: 2 }, 
-        { index: 0 }, 
+        { index: 2 },
+        { index: 0 },
         { index: 1 }
       ]
       const result = _.sort(list, i => i.index, true)
@@ -315,7 +315,7 @@ describe('array module', () => {
       assert.deepEqual(items, [0, 2, 4, 6, 8, 10])
     })
   })
-  
+
   describe('list function', () => {
     test('creates correct list', () => {
       const result = _.list(0, 4)
@@ -399,7 +399,7 @@ describe('array module', () => {
       assert.equal(m.name, 'mary')
     })
   })
-  
+
   describe('merge function', () => {
     test('returns empty array for two null inputs', () => {
       const result = _.merge(null, null, x => '')
@@ -421,7 +421,7 @@ describe('array module', () => {
       const result = _.merge(['a'], [], null)
       assert.deepEqual(result, ['a'])
     })
-    test('returns correctly mergeped lists', () => {
+    test('returns correctly merged lists', () => {
       const inputA = [
         { name: 'ray', group: 'X' },
         { name: 'sara', group: 'X' },
@@ -479,7 +479,7 @@ describe('array module', () => {
       assert.deepEqual(result, lettersXX)
     })
   })
-  
+
   describe('sift', () => {
     const people = [
       null,
@@ -534,7 +534,7 @@ describe('array module', () => {
         identity
       )
       assert.deepEqual(result, [
-        letter('a'), 
+        letter('a'),
         letter('b')
       ])
     })
@@ -543,8 +543,8 @@ describe('array module', () => {
   describe('alphabetical function', () => {
     test('uses getter', () => {
       const list = [
-        { name: 'Leo' }, 
-        { name: 'AJ' }, 
+        { name: 'Leo' },
+        { name: 'AJ' },
         { name: 'Cynthia' }
       ]
       const result = _.alphabetical(list, i => i.name)
@@ -554,8 +554,8 @@ describe('array module', () => {
     })
     test('uses descending order', () => {
       const list = [
-        { name: 'Leo' }, 
-        { name: 'AJ' }, 
+        { name: 'Leo' },
+        { name: 'AJ' },
         { name: 'Cynthia' }
       ]
       const result = _.alphabetical(list, i => i.name, 'desc')

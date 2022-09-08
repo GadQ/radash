@@ -251,7 +251,7 @@ export const list = (
 
 /**
  * Given an array of arrays, returns a single
- * dimentional array with all items in it.
+ * dimensional array with all items in it.
  */
 export const flat = <T>(lists: readonly T[][]): T[] => {
   return lists.reduce((acc, list) => {
